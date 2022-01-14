@@ -311,6 +311,7 @@ const Home = (props: HomeProps) => {
     refreshCandyMachineState,
   ]);
 
+
   return (
     <Container style={{ marginTop: 40 }}>
 
