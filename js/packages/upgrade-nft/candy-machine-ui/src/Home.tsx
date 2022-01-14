@@ -239,9 +239,9 @@ const Home = (props: HomeProps) => {
       const tokenAcct = (await getTokenAccount(candyMachine, wallet.publicKey, upgradeNFTMint))[0];
       const mintTxId = (await burnToken(candyMachine, wallet.publicKey, upgradeNFTMint, tokenAcct))[0];
 
-      let status: any = { err: true };
+      // let status: any = { err: true };
       if (mintTxId) {
-        status = await awaitTransactionSignatureConfirmation(
+        await awaitTransactionSignatureConfirmation(
           mintTxId,
           props.txTimeout,
           props.connection,
@@ -320,7 +320,7 @@ const Home = (props: HomeProps) => {
           onClose={() => true}>
           <Container maxWidth="sm" style={{ position: 'relative', marginTop: 70 }}>
             <Paper style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}>
-              <img src={mpfpConfig.uMpfpImage} width="100%"/>
+              <img src={mpfpConfig.uMpfpImage} width="100%" alt="test1"/>
               <h1 style={{ textAlign: 'center', marginTop: '10px', paddingBottom: 10}}>{mpfpConfig.uMpfpName}</h1>
               <h2 style={{ textAlign: 'center', color: '#fdc838', marginBottom: '-10px' }}>
                 Your Minion just Evolved!
@@ -340,19 +340,19 @@ const Home = (props: HomeProps) => {
             <p style={{ fontSize: 18, textAlign: 'center', marginBottom: '50px' }}>Evolving your Minion will give it new traits and possibly a new personality! <br/>This action CANNOT be reversed.</p>
             <Grid container spacing={2}>
               <Grid item xs={3}>
-                <img src={mpfpConfig.oMpfpImage} className="nftImg" style={{margin: '0 auto', display: 'block'}}/>
+                <img src={mpfpConfig.oMpfpImage} className="nftImg" style={{margin: '0 auto', display: 'block'}} alt="test2"/>
               </Grid>
               <Grid item xs={1}>
                 <AddIcon style={{ marginTop: '100px', marginLeft: 20 }} fontSize="large"/>
               </Grid>
               <Grid item xs={3}>
-                <img src={mpfpConfig.sMpfpImage} className="nftImg" style={{margin: '0 auto', display: 'block'}}/>
+                <img src={mpfpConfig.sMpfpImage} className="nftImg" style={{margin: '0 auto', display: 'block'}} alt="test3"/>
               </Grid>
               <Grid item xs={1}>
                 <DragHandleIcon style={{ marginTop: '100px', marginLeft: 20 }} fontSize="large"/>
               </Grid>
               <Grid item xs={4}>
-                <img src="https://bolderadvocacy.org/wp-content/uploads/2018/08/blue-icon-question-mark-image.png" width="260px" style={{ margin: '0 auto', display: 'block'}}/>
+                <img src="https://bolderadvocacy.org/wp-content/uploads/2018/08/blue-icon-question-mark-image.png" width="260px" style={{ margin: '0 auto', display: 'block'}} alt="test4"/>
               </Grid>
             </Grid>
             <Button variant="contained" onClick={upgradeNft} className="custom" style={{ width: '400px', margin: '0 auto', display: 'block', marginTop: '50px'}}>
@@ -369,7 +369,7 @@ const Home = (props: HomeProps) => {
                   <h1 style={{textAlign: 'center'}}>
                     Thanks for purchasing <span style={{color:'#fdc838'}}>Minions: The Rise of Gru!</span>
                   </h1>
-                  <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Minions_The_Rise_of_Gru_poster.jpg" width="230px" style={{ display: 'block', margin: '0 auto'}}/>
+                  <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Minions_The_Rise_of_Gru_poster.jpg" width="230px" style={{ display: 'block', margin: '0 auto'}} alt="test5"/>
                   <p style={{textAlign: 'center', paddingTop: '10px' }}>You should have received a promotion code from the affiliated theater to claim a free NFT. Connect your wallet below to redeem.</p>
                 </Container>
                 <ConnectButton>Connect Your Wallet</ConnectButton>
@@ -386,7 +386,7 @@ const Home = (props: HomeProps) => {
                 <h1 style={{textAlign: 'center'}}>
                   Thanks for purchasing <span style={{color:'#fdc838'}}>Minions: The Rise of Gru!</span>
                 </h1>
-                <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Minions_The_Rise_of_Gru_poster.jpg" width="230px" style={{ display: 'block', margin: '0 auto'}}/>
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Minions_The_Rise_of_Gru_poster.jpg" width="230px" style={{ display: 'block', margin: '0 auto'}} alt="test6"/>
                 <p style={{textAlign: 'center', paddingTop: '10px' }}>You should have received a promotion code from the affiliated theater to claim a free NFT. Enter the code below to redeem.</p>
               </Container>
               <TextField id="outlined-basic"
@@ -421,7 +421,7 @@ const Home = (props: HomeProps) => {
                       candyMachine={candyMachine}
                       isMinting={isUserMinting}
                       onMint={onMint}
-                      hasPromoCode={mpfpConfig.promoCode != ''}
+                      hasPromoCode={mpfpConfig.promoCode !== ''}
                     />
                   </GatewayProvider>
                 ) : (
@@ -429,7 +429,7 @@ const Home = (props: HomeProps) => {
                     candyMachine={candyMachine}
                     isMinting={isUserMinting}
                     onMint={onMint}
-                    hasPromoCode={mpfpConfig.promoCode != ''}
+                    hasPromoCode={mpfpConfig.promoCode !== ''}
                   />
                 )}
               </MintContainer>

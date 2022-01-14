@@ -1,7 +1,10 @@
 import * as anchor from '@project-serum/anchor';
 
 import { MintLayout, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token';
-import { SystemProgram, Transaction, TransactionInstruction } from '@solana/web3.js';
+
+// import { SystemProgram, Transaction, TransactionInstruction } from '@solana/web3.js';
+import { SystemProgram } from '@solana/web3.js';
+
 import { sendTransactions } from './connection';
 
 import {
