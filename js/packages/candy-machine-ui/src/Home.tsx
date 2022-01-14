@@ -185,7 +185,7 @@ const Home = (props: HomeProps) => {
             <Container style={{ paddingBottom: 25}}>
               <h3>JOIN</h3>
               <h1 style={{color: '#fdc838'}}>THE MINIONVERSE</h1>
-              <img src={BACKGROUND_URL} width="100%"/>
+              <img src={BACKGROUND_URL} width="100%" alt="test1"/>
               {!wallet.connected && !mpfpConfig.didInstallWallet ? (
                 <Button className="custom" variant="contained" onClick={updateDidInstallWallet}
                   style={{ marginTop: 24 }}>
@@ -254,7 +254,7 @@ const Home = (props: HomeProps) => {
                     </MintContainer>
                   </Grid>
                   <Grid item xs={6}>
-                    <img src={BACKGROUND_URL} width="100%"/>
+                    <img src={BACKGROUND_URL} width="100%" alt="test2"/>
                   </Grid>
                 </Grid>
               </Container>
