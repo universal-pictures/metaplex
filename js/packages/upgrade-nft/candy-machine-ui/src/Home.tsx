@@ -394,7 +394,7 @@ const Home = (props: HomeProps) => {
                 variant="outlined" onChange={(e) => setMpfpConfig({
                   ...mpfpConfig, promoCode: e.target.value })}
                 value={mpfpConfig.promoCode}
-                style={{ width: '100%', marginBottom: '40px' }}/>
+                style={{ width: '100%', marginBottom: '15px' }}/>
               {
                 <Header candyMachine={candyMachine} />
               }
