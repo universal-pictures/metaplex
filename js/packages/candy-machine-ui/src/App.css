@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #000000 !important;
+  /* background: url('https://www.crescentavalleyweekly.com/wp-content/uploads/2013/07/2415_DM2_S1500_P0210_0167_P3100R.jpg') !important; */
+  background: url('https://cdnb.artstation.com/p/assets/images/images/008/770/681/large/titouan-perrot-dm3-80.jpg') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  height: calc(100vh - 120px);
+}
+
+button.custom {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
+  color: white !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: -10px;
+}
+
+ul > li {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+hr {
+  padding-bottom: 1px;
+  margin-bottom: 15px !important;
+  display: block;
+}
