@@ -183,7 +183,7 @@ const Home = (props: HomeProps) => {
     console.log('Getting list of owned NFTs');
 
     return new Promise((resolve) => {
-      fetch(`http://localhost:3000/api/metaplex-proxy-owner-nfts?wallet=${wallet.publicKey}`)
+      fetch(`http://c98e-97-94-177-35.ngrok.io/api/metaplex-proxy-owner-nfts?wallet=${wallet.publicKey}`)
         .then(res => res.json())
         .then((nfts) => {
             console.log(nfts);
@@ -231,7 +231,7 @@ const Home = (props: HomeProps) => {
   const upgradeNft = async () => {
     const oMpfpMint = mpfpConfig.oMpfpMint;
     const sMpfpMint = mpfpConfig.sMpfpMint;
-    const url = `http://localhost:3000/api/metaplex-proxy-mpfp?wallet=${wallet.publicKey}&nft=${oMpfpMint}`;
+    const url = `https://c98e-97-94-177-35.ngrok.io/api/metaplex-proxy-mpfp?wallet=${wallet.publicKey}&nft=${oMpfpMint}`;
 
     // First, burn the Upgrade NFT
     const upgradeNFTMint = sMpfpMint;
